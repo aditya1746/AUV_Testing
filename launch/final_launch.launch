@@ -1,0 +1,15 @@
+
+
+<launch>
+
+    <node name="serial_node"        pkg="rosserial_python"      type="serial_node.py">
+    <param name="port"              type="string"               value="/dev/ttyUSB0"/> 
+    <param name="baud"              type="int"                  value="115200"/> 
+    </node>
+
+	<!-- <node pkg="auv_testing" name="only_depth_pid" type="only_depth_v2.py" output="screen" /> -->
+	<node pkg="auv_testing" name="only_straight_pid" type="only_straight_v3.py" output="screen" />
+	<!--<node pkg="auv_codes2" name="gui" type="gui.py" output="screen" /> -->
+
+    <!-- <node name="rqt_gui" pkg="rqt_gui" type="rqt_gui" output="screen" /> -->
+</launch>
